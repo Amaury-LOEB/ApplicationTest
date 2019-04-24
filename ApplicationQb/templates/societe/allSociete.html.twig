@@ -1,0 +1,34 @@
+<div class="btn-group btn-group-toggle" data-toggle="buttons">
+    <label class="btn btn-primary" >
+        <button  type="button" class="btn btn-primary" id="opener">Créer nouvelle société</button>
+    </label>
+    <label class="btn btn-primary">
+        <button type="button" class="btn btn-primary" >Button</button>
+    </label>
+    <label class="btn btn-primary">
+        <button type="button" class="btn btn-primary">Button</button>
+    </label>
+</div>
+<div class="tableau_defilement">
+    <table class="table table-hover">
+        <tr class="table-active">
+            <td class="border_tableau_top">Id</td>
+            <td class="border_tableau_top">Nom Société</td>
+            <td class="border_tableau_top">téléphone Société</td>
+            <td class="border_tableau_top">Site internet Société</td>
+        </tr>
+        {% for societe in allSociete %}
+            <tr class="table-active">
+                <td class="border_tableau"> {{ societe.id }}  &emsp;</td>
+                <td class="border_tableau">
+                    <form action="{{ path('UneSociete', {'id':societe.id} ) }}" >
+                        <button class="tableau" type="submit" style="width:100%;height:100%"; > {{ societe.nomSociete  }} </button>
+                    </form>
+                </td>
+
+                <td class="border_tableau">{{ societe.telephoneSociete  }} &emsp; </td>
+                <td class="border_tableau">{{ societe.internet }} &emsp; </td>
+            </tr>
+        {% endfor %}
+    </table>
+</div>

@@ -1,0 +1,116 @@
+{% form_theme form 'form/formDivLayout.html.twig' %}
+
+{{ form_start(form) }}
+<div class="container" id="backcolor">
+    <br>
+    <div class="row">
+        <div class="col">
+            {{ form_label(form.nomSociete) }}
+            {{ form_widget(form.nomSociete) }}
+        </div>
+        <div class="col">
+            {{ form_label(form.adresseSociete) }}
+            {{ form_widget(form.adresseSociete) }}
+        </div>
+        <div class="col">
+            {{ form_label(form.dateCreationFicheSociete) }}
+            {{ form_widget(form.dateCreationFicheSociete) }}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            {{ form_label(form.telephoneSociete) }}
+            {{ form_widget(form.telephoneSociete) }}
+        </div>
+        <div class="col">
+            {{ form_label(form.complementAdresseSociete) }}
+            {{ form_widget(form.complementAdresseSociete) }}
+        </div>
+        <div class="col">
+            {{ form_label(form.activiteSociete) }}
+            {{ form_widget(form.activiteSociete) }}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            {{ form_label(form.faxSociete) }}
+            {{ form_widget(form.faxSociete) }}
+        </div>
+        <div class="col">
+            {{ form_label(form.cpSociete) }}
+            {{ form_widget(form.cpSociete) }}
+        </div>
+        <div class="col">
+            {{ form_label(form.privePublic) }}
+            {{ form_widget(form.privePublic) }}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            {{ form_label(form.emailSociete) }}
+            {{ form_widget(form.emailSociete) }}
+        </div>
+        <div class="col">
+            {{ form_label(form.paysSociete) }}
+            {{ form_widget(form.paysSociete) }}
+        </div>
+        <div class="col">
+            {{ form_label(form.typeClient) }}
+            {{ form_widget(form.typeClient) }}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            {{ form_label(form.internet) }}
+            {{ form_widget(form.internet) }}
+        </div>
+        <div class="col">
+            {{ form_label(form.villeSociete) }}
+            {{ form_widget(form.villeSociete) }}
+        </div>
+        <div class="col">
+            {{ form_label(form.tailleSociete) }}
+            {{ form_widget(form.tailleSociete) }}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            {{ form_label(form.statutSociete) }}
+            {{ form_widget(form.statutSociete) }}
+        </div>
+        <div class="col">
+            {{ form_label(form.numeroSiret) }}
+            {{ form_widget(form.numeroSiret) }}
+        </div>
+        <div class="col">
+            {{ form_label(form.numTvaSociete) }}
+            {{ form_widget(form.numTvaSociete) }}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            {{ form_label(form.groupe) }}
+            {{ form_widget(form.groupe) }}
+        </div>
+        <div class="col">
+            {{ form_label(form.contact) }}
+            {{ form_widget(form.contact) }}
+        </div>
+        <div class="col">
+            {{ form_label(form.commentaire) }}
+            {{ form_widget(form.commentaire) }}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+        </div>
+        <div class="col" >
+            {{ form_label(form.save) }}
+            {{ form_widget(form.save) }}
+            <br> <br>
+        </div>
+        <div class="col">
+        </div>
+    </div>
+    {{ form_end(form) }}
+</div>

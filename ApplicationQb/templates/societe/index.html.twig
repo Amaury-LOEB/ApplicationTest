@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Société{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <style>
+        .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+    </style>
+{% endblock %}
+
+{% block body %}
+    <br>
+    {% include "societe/recherche.html.twig" %}
+    {% include "societe/allSociete.html.twig" %}
+    {% include "societe/popupFormulaire.html.twig" %}
+{% endblock %}
+
+{% block javascripts %}
+   {{ parent() }}
+    <script src="{{ asset('js/popup.js') }}"> </script>
+    <script src="{{ asset('js/multi-select_boxes.js') }}"> </script>
+{% endblock %}
