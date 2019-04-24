@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Entity\Contact;
 use App\Entity\Societe;
 use App\Form\SocieteForm;
 use App\Repository\SocieteRepository;
@@ -74,6 +75,27 @@ class AppliController extends Controller
         }
         return $this->render('societe/uneSociete.html.twig', [
             'societe' => $societe,
+            'form' => $form->createView(),
+        ]);
+    }
+    /**
+     * @Route("/application/contact", name="allContact")
+     */
+    public function allContactAction(Request $request, SocieteRepository $repo)
+    {
+        $societe2 = $repo->findAll();
+        $societe = new Contact();
+        $form = $this->createForm(SocieteForm::class, $societe);
+        $form->handleRequest($request);
+        if ($form->isSubmitted() && $form->isValid()) {
+            $task = $form->getData();
+            $entityManager = $this->getDoctrine()->getManager();
+            $entityManager->persist($task);
+            $entityManager->flush();
+            return $this->redirectToRoute('societe');
+        }
+        return $this->render('contact/allContact.html.twig', [
+            'allSociete' => $societe2,
             'form' => $form->createView(),
         ]);
     }
